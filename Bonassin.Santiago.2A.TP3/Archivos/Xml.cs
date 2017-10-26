@@ -27,11 +27,7 @@ namespace Archivos
             {
                 throw new ArchivosException(e);
             }
-
-
-
         }
-
         public bool Leer(string archivo, out T datos)
         {
             try
@@ -40,16 +36,13 @@ namespace Archivos
                 {
                     XmlSerializer xmls = new XmlSerializer(typeof(T));
                     datos = (T)xmls.Deserialize(sr);
-
                 }
                 return true;
-
             }
             catch (Exception e)
             {
                 throw new ArchivosException(e);
             }
-
         }
     }
 }

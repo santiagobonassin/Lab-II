@@ -181,17 +181,12 @@ namespace EntidadesInstanciables
         }
         public static bool Guardar(Universidad gim)
         {
-            Xml<Universidad> miXml = new Xml<Universidad>();
-            if (miXml.Guardar(@"\universidad.xml", gim))
+            Xml<Universidad> salida = new Xml<Universidad>();
+            if (salida.Guardar(@"\universidad.xml", gim))
             {
                 return true;
             }
             return false;
-
-
         }
-
-
-
     }
 }

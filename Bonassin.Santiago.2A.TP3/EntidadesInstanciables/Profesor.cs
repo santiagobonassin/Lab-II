@@ -72,11 +72,11 @@ namespace EntidadesInstanciables
         }
         protected override string ParticiparEnClase()
         {          
-            return "\nCLASES DEL DIA: " + this._clasesDelDia.Dequeue().ToString();
+            return "\nCLASES DEL DIA: " + this._clasesDelDia.Dequeue();
         }
         protected override string MostrarDatos()
         {
-            return base.MostrarDatos() + ParticiparEnClase();
+            return base.MostrarDatos() + this._clasesDelDia.Peek().ToString();
         }
         public override string ToString()
         {

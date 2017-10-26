@@ -24,11 +24,7 @@ namespace Archivos
             {
                 throw new ArchivosException(e);
             }
-
-
-
         }
-
         public bool Leer(string archivo, out string datos)
         {
             try
@@ -38,13 +34,11 @@ namespace Archivos
                     datos = sr.ReadToEnd();
                 }
                 return true;
-
             }
             catch (Exception e)
             {
                 throw new ArchivosException(e);
             }
-
         }
     }
 }
