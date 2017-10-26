@@ -8,7 +8,7 @@ namespace Excepciones
 {
     public class SinProfesorException:Exception
     {
-        static string mensaje = "No hay profesor para la clase.";
+        static string mensaje = "No hay profesor capas de dar la clase";
         public SinProfesorException() : base(mensaje)
         {
 

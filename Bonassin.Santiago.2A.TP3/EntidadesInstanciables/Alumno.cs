@@ -24,6 +24,7 @@ namespace EntidadesInstanciables
         public Alumno(int id, string nombre, string apellido, string dni, Enacionalidad nacionalidad, Universidad.EClases clasesQueToma) : base(id, nombre, apellido, dni, nacionalidad)
         {
             this._clasesQueToma = clasesQueToma;
+            this._estadoCuenta = EEstadoCuenta.AlDia;
         }
         public Alumno(int id, string nombre, string apellido, string dni, Enacionalidad nacionalidad, Universidad.EClases clasesQueToma, EEstadoCuenta estadoCuenta) : this(id, nombre, apellido, dni, nacionalidad, clasesQueToma)
         {
@@ -31,11 +32,11 @@ namespace EntidadesInstanciables
         }
         protected override string MostrarDatos()
         {
-            return base.MostrarDatos() + this._clasesQueToma + " " + this._estadoCuenta;
+            return base.MostrarDatos() + "\n" +ParticiparEnClase() + "\nEstado Cuenta: " + this._estadoCuenta + "\n\n";
         }
         protected override string ParticiparEnClase()
         {
-            return "Toma clase de " + this._clasesQueToma;
+            return "Toma clase de " + this._clasesQueToma.ToString();
         }
         public static bool operator ==(Alumno a, Universidad.EClases clase)
         {

@@ -139,11 +139,7 @@ namespace EntidadesInstanciables
             if (g != p)
             {
                 g.profesores.Add(p);
-            }
-            else
-            {
-                Console.WriteLine("El profesor ingresado no se encuentra en la Universidad\n");
-            }
+            }      
             return g;
         }
         public static Universidad operator +(Universidad g, EClases clase)

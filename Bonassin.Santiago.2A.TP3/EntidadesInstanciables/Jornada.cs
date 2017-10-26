@@ -82,8 +82,8 @@ namespace EntidadesInstanciables
         {
             string aux = "";
 
-            aux += "Jornada:\n";
-            aux += "CLASE DE: " + this._clase + "por" + this._instructor.ToString() + "\n";
+            aux += "--------------------------------------------------------------------------\n";
+            aux += "CLASE DE: " + this._clase + "\nPor " + this._instructor.ToString() + "\n";
             aux += "\nALUMNOS:\n";
 
             foreach (Alumno i in this._alumnos)

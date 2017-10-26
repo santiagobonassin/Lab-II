@@ -8,7 +8,7 @@ namespace Excepciones
 {
     public class NacionalidadInvalidaException:Exception
     {
-        static string mensaje = "La nacionalidad no coincide con el numero de dni.";
+        static string mensaje = "La nacionalidad ingresada no coincide con el numero de DNI ingresado";
 
         public NacionalidadInvalidaException() : base(mensaje)
         {

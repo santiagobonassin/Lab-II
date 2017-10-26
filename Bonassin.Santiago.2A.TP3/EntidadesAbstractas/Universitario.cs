@@ -14,7 +14,7 @@ namespace EntidadesAbstractas
         {
             this._legajo = 0;
         }
-        public Universitario(int legajo, string nombre, string apellido, string dni, Enacionalidad nacionalidad) : this()
+        public Universitario(int legajo, string nombre, string apellido, string dni, Enacionalidad nacionalidad) : base(nombre, apellido, dni, nacionalidad)
         {
             this._legajo = legajo;
         }
@@ -32,7 +32,7 @@ namespace EntidadesAbstractas
         }
         protected virtual string MostrarDatos()
         {
-            return this.Nombre + " " + this.Apellido + " " + this.Nacionalidad + " " + this.DNI + " " + this._legajo;
+            return "Nombre Completo: " + this.Nombre + " " + this.Apellido + "\nNacionalidad: " + this.Nacionalidad  + "\nLegajo " + this._legajo;
         }
         protected abstract string ParticiparEnClase();
 

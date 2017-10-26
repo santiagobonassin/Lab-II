@@ -71,9 +71,8 @@ namespace EntidadesInstanciables
 
         }
         protected override string ParticiparEnClase()
-        {
-            //VIGILAR ACA
-            return "CLASES DEL DIA: " + this._clasesDelDia.Dequeue();
+        {          
+            return "\nCLASES DEL DIA: " + this._clasesDelDia.Dequeue().ToString();
         }
         protected override string MostrarDatos()
         {
